@@ -40,5 +40,7 @@ async function buildNewWorker() {
 	await webpack();
 	await upload();
 }
-
 buildNewWorker();
+setInterval(function() {
+	buildNewWorker();
+}, 60 * 1000);

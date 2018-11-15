@@ -15,7 +15,7 @@ async function handle(request) {
 				"Content-Type": "text/html; charset=UTF-8"
 			})
 		})
-	} else if(request.url.match(/^https:\/\/staging\.moat\.gg\/api\/servers\/?$/)) { //https://staging.moat.gg/api/servers/
+	} else if(request.url.match(/^https:\/\/moat\.gg\/api\/servers\/?$/)) { //https://moat.gg/api/servers/
 		const servers = require('./data/servers.json');
 
 		return new Response(JSON.stringify(servers), {
