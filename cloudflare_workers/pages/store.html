@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Support the community with support credits from our store.">
+	<meta property="og:image" content="https://moat.gg/assets/img/mg-square2.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="512">
+	<meta property="og:image:height" content="512">
+	<meta property="og:description" content="Support the community with support credits from our store.">
+	<meta property="og:title" content="Store - Moat Gaming">
+	<title>Store - Moat Gaming</title>
+	<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+	<link href="/assets/css/release.min.css?v=1.7.11" rel="stylesheet">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113186194-1"></script>
+	<script>function gtag() {
+		dataLayer.push(arguments)
+	}
+
+	(function (e, a, t, n, p) {
+		e[n] = e[n] || [], e[n].push({t: (new Date).getTime(), event: "snippetRun"});
+		var d = a.getElementsByTagName(t)[0], g = a.createElement(t);
+		g.async = !0, g.src = "https://www.paypal.com/tagmanager/pptm.js?id=fb793f41-fdd8-11e7-ae98-3d1cef72c8e0", d.parentNode.insertBefore(g, d)
+	})(window, document, "script", "paypalDDL"), window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-113186194-1");</script>
+</head>
+<body id="Store">
+<nav class="navbar navbar-dark navbar-expand-lg">
+	<div class="container"><a class="navbar-brand" href="/"><img src="/assets/img/logo.png" width="160"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+				aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"><span
+				class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="/forums">Forums</a></li>
+				<li class="nav-item"><a class="nav-link" href="/store" style="color: #DE8912;">Store</a></li>
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="serverDropdown"
+												 role="button" data-toggle="dropdown" aria-haspopup="true"
+												 aria-expanded="false">Servers</a>
+					<div class="dropdown-menu" aria-labelledby="serverDropdown"><a class="dropdown-item" href="/bans">Bans</a><a
+							class="dropdown-item" href="/leaderboard">Leaderboard</a><a class="dropdown-item"
+																						href="/staff">Staff</a></div>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="/changes">Changes</a></li>
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="staffDropdown"
+												 role="button" data-toggle="dropdown" aria-haspopup="true"
+												 aria-expanded="false">Staff</a>
+					<div class="dropdown-menu" aria-labelledby="staffDropdown"><a class="dropdown-item" href="/alts">Alts</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="socialDropdown"
+												 role="button" data-toggle="dropdown" aria-haspopup="true"
+												 aria-expanded="false">Social</a>
+					<div class="dropdown-menu" aria-labelledby="socialDropdown"><a class="dropdown-item"
+																				   href="https://discord.gg/moatgaming">Discord</a><a
+							class="dropdown-item" href="/steam">Steam Group</a></div>
+				</li>
+			</ul>
+			<img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/06/0689cf986b4491f8405a259300820d66d55424e7_full.jpg" class="forum-user"><a class="forum-user" href='#'>-</a></div>
+	</div>
+</nav>
+<div class="container" style="flex: 1;">
+	<div class="welcome text-center" style="margin-top:0;margin-bottom: 50px;"><h1
+			style="font-weight: 600; font-size: 4rem;">Welcome to the Store</h1>
+		<p style="color: #eaeaea; font-size: 1.5rem;">Here you may purchase support credits and automatically receive
+			them in-game to redeem for rewards!</p></div>
+	<div class="donation-box"><img src="/assets/img/icons/123-money-2.png" width="64" style="margin-bottom: 40px">
+		<p>You can redeem support credits in-game for rewards. All contributions are greatly appreciated!</p>
+		<form action="/api/paypal/pay" method="post">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="steam-user"><img src="/assets/img/icons/user-big.png" width="218"></div>
+					<div class="donation-steam-id">Username</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="form-row">
+						<div class="col-lg-6"><label for="steamName">User/SteamID</label><input type="text"
+																								class="form-control"
+																								name="steamID"
+																								id="steamID"
+																								placeholder="Username/SteamID"
+																								value='76561198106061489'
+																								required>
+							<div id="dropdown" style="display:none">
+								<div id="searching">Searching...</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6"><label for="credits">Support Credits</label><input type="text"
+																										  class="form-control"
+																										  name="credits"
+																										  id="credits"
+																										  placeholder="2,000"
+																										  required>
+						</div>
+						<div class="col-lg-3 col-md-6"><label for="credits">USD</label>
+							<div class="input-group usd-wrap"><input type="text" class="form-control" name="usd"
+																	 id="usd" placeholder="$20.00" required></div>
+						</div>
+					</div>
+					<div class="form-check form-check-inline"><label class="form-check-label"><input
+							class="form-check-input" type="checkbox" name="recur" id="recur" checked> <span>Recur every month?</span></label>
+					</div>
+					<div class="form-check form-check-inline"><label class="form-check-label"><input
+							class="form-check-input" type="checkbox" name="tos" id="tos" required> <span>I agree to the <a
+							href="#tosModal" data-toggle="modal" data-target="#tosModal">terms and conditions</a></span></label>
+					</div>
+					<div class="error">Please fill out all form fields.</div>
+					<button type="submit" class="btn btn-primary" id="sendDonation" disabled>Purchase</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal fade" id="tosModal" tabindex="-1" role="dialog" aria-labelledby="tos" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"><h5 class="modal-title" id="tosTitle">Moat Gaming - Terms and Conditions</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body"><p>Payments to Moat Gaming is a payment for the virtual items contained in the
+					purchase. This transaction is final and there are no refunds. If you are banned for breaking the
+					rules of the Moat Gaming servers, you will not be refunded. Bans are subject to the full discretion
+					of the server admins and rules can be changed at any time. There is no guarantee on being able to
+					enter the server, and if the server is no longer operated the virtual items are forfeit. Refund
+					requestsdue to issues concerning lag, game glitches, or any other issues are subject to the
+					discretion of the Moat Gaming administration team. All items are virtual and have no value.</p>
+					<hr>
+					<h3>Privacy Policy</h3>
+					<p>This policy covers how we use your personal information. We take your privacy seriously and will
+						take all measures to protect your personal information. Any personal information received will
+						only be used to fill your order. We will not sell or redistribute your information to
+						anyone.</p>
+					<hr>
+					<h3>About the Moat Gaming Store</h3>
+					<p>The Moat Gaming community is in no way affiliated with Facepunch Studios Ltd. Nor should it be
+						considered a company endorsed by Facepunch Studios Ltd.</p>
+					<p>Any contributions or purchases made on this store goes to the Moat Gaming Development Team, also
+						known as the registered business MOAT GAMING.
+					<p/>
+					<p>For more information, support or a purchase history please email <a
+							href="/cdn-cgi/l/email-protection" class="__cf_email__"
+							data-cfemail="d5b8bab4a195b8bab4a1b2b4b8bcbbb2fbbaa7b2">[email&#160;protected]</a></p>
+					<p>*Requires a Steam account with Garry's Mod purchased to access the store.</p></div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer style="background-color: rgba(3, 9, 14, 0.79); box-shadow: 0 0 15px 0 rgba(0,0,0,.4); font-weight: 500; overflow: visible; position: relative; margin-top: 5rem; padding: 60px 160px 20px; font-family: Lato,sans-serif!important;">
+	<div class="container"
+		 style="-webkit-box-pack: justify; display: flex; justify-content: space-between; overflow: hidden;">
+		<div style="-webkit-box-direction: normal; -webkit-box-orient: vertical; display: flex; flex-direction: column;">
+			<img src="/assets/img/logo.png" width="160"><br><span style="color: hsla(0,0%,100%,.6); font-size: 13px;">We run super awesome Garry's Mod servers.</span>
+		</div>
+		<div style="-webkit-box-direction: normal; -webkit-box-orient: vertical; display: flex; flex-direction: column; border-right: 1px solid hsla(0,0%,100%,.4);"></div>
+		<div style="-webkit-box-direction: normal; -webkit-box-orient: vertical; display: flex; flex-direction: column;">
+			<h3 style="color: #fff; font-size: 14px; margin-bottom: 13px; font-weight: 700; font-family: inherit;">
+				Community</h3><a class="nav-link"
+								 style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+								 href="/forums"><span>Forums</span></a><a class="nav-link"
+																		  style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+																		  href="/changes"><span>Changes</span></a><a
+				class="nav-link"
+				style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+				href="/discord"><span>Discord</span></a><a class="nav-link"
+														   style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+														   href="/steam"><span>Steam Group</span></a><a class="nav-link"
+																										style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+																										href="/"><span>Server List</span></a>
+		</div>
+		<div style="-webkit-box-direction: normal; -webkit-box-orient: vertical; display: flex; flex-direction: column;">
+			<h3 style="color: #fff; font-size: 14px; margin-bottom: 13px; font-weight: 700; font-family: inherit;">
+				Servers</h3><a class="nav-link"
+							   style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+							   href="/store"><span>Store</span></a><a class="nav-link"
+																	  style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+																	  href="https://i.moat.gg/servers/ttt/motd/rules.php"
+																	  target="_blank"><span>Rules &amp; Guidelines</span></a><a
+				class="nav-link"
+				style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+				href="/bans"><span>Ban List</span></a><a class="nav-link"
+														 style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+														 href="/leaderboard"><span>Leaderboard</span></a></div>
+		<div style="-webkit-box-direction: normal; -webkit-box-orient: vertical; display: flex; flex-direction: column;">
+			<h3 style="color: #fff; font-size: 14px; margin-bottom: 13px; font-weight: 700; font-family: inherit;">
+				Contact</h3><a class="nav-link"
+							   style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+							   href="/leaderboard"><span>Contact Staff</span></a><a class="nav-link"
+																					style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+																					href="/forums/forum/56-support-tickets/"><span>Support Ticket</span></a><a
+				class="nav-link"
+				style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+				href="https://moat.gg/forums/messenger/compose/?to=8"><span>Private Message</span></a></div>
+		<div style="-webkit-box-direction: normal; -webkit-box-orient: vertical; display: flex; flex-direction: column;">
+			<h3 style="color: #fff; font-size: 14px; margin-bottom: 13px; font-weight: 700; font-family: inherit;">
+				Useful Links</h3><a class="nav-link"
+									style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+									href="/forums/forum/119-announcements-news/"><span>Announcements</span></a><a
+				class="nav-link"
+				style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+				href="/forums/forum/131-ttt-trial-staff-applications/"><span>Apply for Staff</span></a><a
+				class="nav-link"
+				style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+				href="/forums/forum/54-player-complaints/"><span>Report a Player</span></a><a class="nav-link"
+																							  style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+																							  href="/forums/forum/41-unban-requests/"><span>Appeal a Ban</span></a><a
+				class="nav-link"
+				style="padding: 0; color: hsla(0,0%,100%,.6); font-size: 14px; line-height: 20px; text-decoration: none;"
+				href="/textures"><span>Textures Help</span></a></div>
+	</div>
+	<div class="container"
+		 style="-webkit-box-pack: justify; display: flex; justify-content: space-between; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid hsla(0,0%,100%,.4); overflow: hidden;">
+		<div style="-webkit-box-direction: normal; -webkit-box-orient: vertical; display: flex; flex-direction: column;">
+			<div class="cc">&copy; 2018 Moatgaming. All rights reserved.</div>
+		</div>
+		<div style="-webkit-box-direction: normal; -webkit-box-orient: vertical; display: flex; flex-direction: column;">
+			<div class="d-d">ALL TRADEMARKS AND COPYRIGHTS ON THIS SITE ARE PROPERTY OF THEIR RESPECTIVE OWNERS.</div>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

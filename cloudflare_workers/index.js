@@ -5,25 +5,21 @@ addEventListener('fetch', event => {
 });
 
 async function handle(request) {
-	if(request.url.match(/^https:\/\/moat\.gg\/assets\//)) { //https://moat.gg/store/765XX
-		let path = new URL(request.url).pathname;
-
-		return await fetch(`https://cdn.moat.gg${path}`)
-	} else if(request.url.match(/^https:\/\/moat\.gg\/api\/servers\/?$/)) { //https://moat.gg/api/servers/
-		const servers = require('./data/servers.json');
-
-		return new Response(JSON.stringify(servers), {
-			headers: new Headers({
-				"Content-Type": "application/json"
-			})
-		})
-	} else if(request.url.match(/^https:\/\/staging\.moat\.gg\/store\/[0-9]{17}$/)) { //https://staging.moat.gg/store/765XX
+	if(request.url.match(/^https:\/\/staging\.moat\.gg\/store\/[0-9]{17}$/)) { //https://staging.moat.gg/store/765XX
 		const store = require('./pages/store.html');
 		const user = cookie.parse(request.headers.get('Cookie') || '').forum_steam_id;
 
 		return new Response(store.replace('/store', `/store/${user}`), {
 			headers: new Headers({
 				"Content-Type": "text/html; charset=UTF-8"
+			})
+		})
+	} else if(request.url.match(/^https:\/\/moat\.gg\/api\/servers\/?$/)) { //https://moat.gg/api/servers/
+		const servers = require('./data/servers.json');
+
+		return new Response(JSON.stringify(servers), {
+			headers: new Headers({
+				"Content-Type": "application/json"
 			})
 		})
 	} else if(request.url.match(/^https:\/\/discord\.moat\.gg\//)) {
@@ -78,7 +74,12 @@ async function handle(request) {
 
 			return response
 		}
+	} else if(request.url.match(/^https:\/\/gmc\.moat\.gg\//)) {
+		return new Response(JSON.stringify({content:'hi'}), {
+			headers: new Headers({
+				"Content-Type": "application/json"
+			})
+		})
 	}
-
 	return fetch(request);
 }
