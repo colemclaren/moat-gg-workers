@@ -20,12 +20,12 @@
 	  "node-cmd": "^3.0.0",
 	  "path-to-regexp": "^3.0.0",
 	  "request": "^2.88.0",
-	  "webpack": "^4.25.1"
+	  "webpack": "^5.75.0"
 	},
 	"devDependencies": {
 	  "raw-loader": "^0.5.1",
 	  "uglifyjs-webpack-plugin": "^2.0.1",
-	  "webpack-cli": "^3.1.2"
+	  "webpack-cli": "^5.0.1"
 	}
   }
   
